@@ -1,0 +1,44 @@
+<!--
+  This example requires Tailwind CSS v2.0+
+
+  The alpine.js code is *NOT* production ready and is included to preview
+  possible interactivity
+-->
+<div class="bg-white py-8">
+    <div class="mx-auto max-w-7xl">
+      
+  <div class="px-4 py-10 sm:px-6 lg:px-8">
+    <div class="mx-auto flex items-center justify-between gap-x-8 lg:mx-0">
+      <div class="flex items-center gap-x-6">
+        <img src="https://tailwindui.com/img/logos/48x48/tuple.svg" alt="" class="h-16 w-16 flex-none rounded-full ring-1 ring-gray-900/10">
+        <h1>
+          <div class="text-sm leading-6 text-gray-500">Invoice <span class="text-gray-700">#00011</span></div>
+          <div class="mt-1 text-base font-semibold leading-6 text-gray-900">Tuple, Inc</div>
+        </h1>
+      </div>
+      <div class="flex items-center gap-x-4 sm:gap-x-6">
+        <button type="button" class="hidden text-sm font-semibold leading-6 text-gray-900 sm:block">Copy URL</button>
+        <a href="#" class="hidden text-sm font-semibold leading-6 text-gray-900 sm:block">Edit</a>
+        <a href="#" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Send</a>
+
+        <div x-data="Components.menu({ open: false })" x-init="init()" @keydown.escape.stop="open = false; focusButton()" @click.away="onClickAway($event)" class="relative sm:hidden">
+          <button type="button" class="-m-3 block p-3" id="more-menu-button" x-ref="button" @click="onButtonClick()" @keyup.space.prevent="onButtonEnter()" @keydown.enter.prevent="onButtonEnter()" aria-expanded="false" aria-haspopup="true" x-bind:aria-expanded="open.toString()" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+            <span class="sr-only">More</span>
+            <svg class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  <path d="M10 3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10 8.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM11.5 15.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z"></path>
+</svg>
+          </button>
+
+          
+            <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 z-10 mt-0.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none" x-ref="menu-items" x-description="Dropdown menu, show/hide based on menu state." x-bind:aria-activedescendant="activeDescendant" role="menu" aria-orientation="vertical" aria-labelledby="more-menu-button" tabindex="-1" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()" @keydown.tab="open = false" @keydown.enter.prevent="open = false; focusButton()" @keyup.space.prevent="open = false; focusButton()">
+              <button type="button" class="block w-full px-3 py-1 text-left text-sm leading-6 text-gray-900" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-50': activeIndex === 0 }" role="menuitem" tabindex="-1" id="more-menu-item-0" @mouseenter="onMouseEnter($event)" @mousemove="onMouseMove($event, 0)" @mouseleave="onMouseLeave($event)" @click="open = false; focusButton()">Copy URL</button>
+              <a href="#" class="block px-3 py-1 text-sm leading-6 text-gray-900" :class="{ 'bg-gray-50': activeIndex === 1 }" role="menuitem" tabindex="-1" id="more-menu-item-1" @mouseenter="onMouseEnter($event)" @mousemove="onMouseMove($event, 1)" @mouseleave="onMouseLeave($event)" @click="open = false; focusButton()">Edit</a>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </div>
+  </div>

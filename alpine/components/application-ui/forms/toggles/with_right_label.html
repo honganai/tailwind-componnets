@@ -1,0 +1,20 @@
+<!--
+  This example requires Tailwind CSS v2.0+
+
+  The alpine.js code is *NOT* production ready and is included to preview
+  possible interactivity
+-->
+<div class="flex items-center justify-center bg-white p-8">
+    
+  <div class="flex items-center" x-data="{ on: false }">
+    <button type="button" class="bg-gray-200 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2" role="switch" aria-checked="false" x-ref="switch" x-state:on="Enabled" x-state:off="Not Enabled" :class="{ 'bg-indigo-600': on, 'bg-gray-200': !(on) }" aria-labelledby="annual-billing-label" :aria-checked="on.toString()" @click="on = !on">
+      <span aria-hidden="true" class="translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out" x-state:on="Enabled" x-state:off="Not Enabled" :class="{ 'translate-x-5': on, 'translate-x-0': !(on) }"></span>
+    </button>
+    <span class="ml-3 text-sm" id="annual-billing-label" @click="on = !on; $refs.switch.focus()">
+      <span class="font-medium text-gray-900">Annual billing</span>
+      <!-- space -->
+      <span class="text-gray-500">(Save 10%)</span>
+    </span>
+  </div>
+
+  </div>

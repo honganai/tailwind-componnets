@@ -1,0 +1,76 @@
+<!--
+  This example requires Tailwind CSS v2.0+
+
+  The alpine.js code is *NOT* production ready and is included to preview
+  possible interactivity
+-->
+<div class="h-[720px] overflow-y-auto bg-white">
+    
+  <div class="flex min-h-full flex-col">
+    <header class="shrink-0 border-b border-gray-200 bg-white">
+      <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&amp;shade=600" alt="Your Company">
+        <div class="flex items-center gap-x-8">
+          <button type="button" class="-m-2.5 p-2.5 text-gray-400 hover:text-gray-300">
+            <span class="sr-only">View notifications</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"></path>
+</svg>
+          </button>
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your profile</span>
+            <img class="h-8 w-8 rounded-full bg-gray-800" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="mx-auto flex w-full max-w-7xl items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8">
+      <aside class="sticky top-8 hidden w-44 shrink-0 lg:block">
+        <x-placeholder message="Left column area">
+          <div class="relative h-[576px] overflow-hidden rounded-xl border border-dashed border-gray-400 opacity-75">
+            <svg class="absolute inset-0 h-full w-full stroke-gray-900/10" fill="none">
+              <defs>
+                <pattern id="pattern-e65c4c0f-2107-4ff8-8f1a-e4204a4fd15f" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                  <path d="M-3 13 15-5M-5 5l18-18M-1 21 17 3"></path>
+                </pattern>
+              </defs>
+              <rect stroke="none" fill="url(#pattern-e65c4c0f-2107-4ff8-8f1a-e4204a4fd15f)" width="100%" height="100%"></rect>
+            </svg>
+          </div>
+        </x-placeholder>
+      </aside>
+
+      <main class="flex-1">
+        <x-placeholder message="Main area">
+          <div class="relative h-[576px] overflow-hidden rounded-xl border border-dashed border-gray-400 opacity-75 lg:h-[1024px]">
+            <svg class="absolute inset-0 h-full w-full stroke-gray-900/10" fill="none">
+              <defs>
+                <pattern id="pattern-7b69d9f9-ca30-48c9-a80a-268e7b084e52" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                  <path d="M-3 13 15-5M-5 5l18-18M-1 21 17 3"></path>
+                </pattern>
+              </defs>
+              <rect stroke="none" fill="url(#pattern-7b69d9f9-ca30-48c9-a80a-268e7b084e52)" width="100%" height="100%"></rect>
+            </svg>
+          </div>
+        </x-placeholder>
+      </main>
+
+      <aside class="sticky top-8 hidden w-96 shrink-0 xl:block">
+        <x-placeholder message="Right column area">
+          <div class="relative h-[576px] overflow-hidden rounded-xl border border-dashed border-gray-400 opacity-75">
+            <svg class="absolute inset-0 h-full w-full stroke-gray-900/10" fill="none">
+              <defs>
+                <pattern id="pattern-1b61a508-0497-4b7f-8a04-44300b5c3e3a" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                  <path d="M-3 13 15-5M-5 5l18-18M-1 21 17 3"></path>
+                </pattern>
+              </defs>
+              <rect stroke="none" fill="url(#pattern-1b61a508-0497-4b7f-8a04-44300b5c3e3a)" width="100%" height="100%"></rect>
+            </svg>
+          </div>
+        </x-placeholder>
+      </aside>
+    </div>
+  </div>
+
+  </div>

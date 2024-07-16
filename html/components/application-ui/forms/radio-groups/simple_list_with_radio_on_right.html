@@ -1,0 +1,67 @@
+<!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
+<fieldset>
+  <legend class="text-base font-semibold text-gray-900">Select a side</legend>
+  <div class="mt-4 divide-y divide-gray-200 border-b border-t border-gray-200">
+    <div class="relative flex items-start py-4">
+      <div class="min-w-0 flex-1 text-sm leading-6">
+        <label for="side-null" class="select-none font-medium text-gray-900">None</label>
+      </div>
+      <div class="ml-3 flex h-6 items-center">
+        <input id="side-null" name="plan" type="radio" checked class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+      </div>
+    </div>
+    <div class="relative flex items-start py-4">
+      <div class="min-w-0 flex-1 text-sm leading-6">
+        <label for="side-1" class="select-none font-medium text-gray-900">Baked beans</label>
+      </div>
+      <div class="ml-3 flex h-6 items-center">
+        <input id="side-1" name="plan" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+      </div>
+    </div>
+    <div class="relative flex items-start py-4">
+      <div class="min-w-0 flex-1 text-sm leading-6">
+        <label for="side-2" class="select-none font-medium text-gray-900">Coleslaw</label>
+      </div>
+      <div class="ml-3 flex h-6 items-center">
+        <input id="side-2" name="plan" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+      </div>
+    </div>
+    <div class="relative flex items-start py-4">
+      <div class="min-w-0 flex-1 text-sm leading-6">
+        <label for="side-3" class="select-none font-medium text-gray-900">French fries</label>
+      </div>
+      <div class="ml-3 flex h-6 items-center">
+        <input id="side-3" name="plan" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+      </div>
+    </div>
+    <div class="relative flex items-start py-4">
+      <div class="min-w-0 flex-1 text-sm leading-6">
+        <label for="side-4" class="select-none font-medium text-gray-900">Garden salad</label>
+      </div>
+      <div class="ml-3 flex h-6 items-center">
+        <input id="side-4" name="plan" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+      </div>
+    </div>
+    <div class="relative flex items-start py-4">
+      <div class="min-w-0 flex-1 text-sm leading-6">
+        <label for="side-5" class="select-none font-medium text-gray-900">Mashed potatoes</label>
+      </div>
+      <div class="ml-3 flex h-6 items-center">
+        <input id="side-5" name="plan" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+      </div>
+    </div>
+  </div>
+</fieldset>

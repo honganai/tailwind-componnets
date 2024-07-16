@@ -1,0 +1,61 @@
+<!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
+<div class="relative z-10" role="dialog" aria-modal="true">
+  <!--
+    Background backdrop, show/hide based on modal state.
+
+    Entering: "ease-out duration-300"
+      From: "opacity-0"
+      To: "opacity-100"
+    Leaving: "ease-in duration-200"
+      From: "opacity-100"
+      To: "opacity-0"
+  -->
+  <div class="fixed inset-0 bg-gray-500 bg-opacity-25 transition-opacity"></div>
+
+  <div class="fixed inset-0 z-10 w-screen overflow-y-auto p-4 sm:p-6 md:p-20">
+    <!--
+      Command palette, show/hide based on modal state.
+
+      Entering: "ease-out duration-300"
+        From: "opacity-0 scale-95"
+        To: "opacity-100 scale-100"
+      Leaving: "ease-in duration-200"
+        From: "opacity-100 scale-100"
+        To: "opacity-0 scale-95"
+    -->
+    <div class="mx-auto max-w-xl transform rounded-xl bg-white p-2 shadow-2xl ring-1 ring-black ring-opacity-5 transition-all">
+      <input type="text" class="w-full rounded-md border-0 bg-gray-100 px-4 py-2.5 text-gray-900 focus:ring-0 sm:text-sm" placeholder="Search..." role="combobox" aria-expanded="false" aria-controls="options">
+
+      <!-- Results, show/hide based on command palette state. -->
+      <ul class="-mb-2 max-h-72 scroll-py-2 overflow-y-auto py-2 text-sm text-gray-800" id="options" role="listbox">
+        <!-- Active: "bg-indigo-600 text-white" -->
+        <li class="cursor-default select-none rounded-md px-4 py-2" id="option-1" role="option" tabindex="-1">Leslie Alexander</li>
+        <li class="cursor-default select-none rounded-md px-4 py-2" id="option-2" role="option" tabindex="-1">Michael Foster</li>
+        <li class="cursor-default select-none rounded-md px-4 py-2" id="option-3" role="option" tabindex="-1">Dries Vincent</li>
+        <li class="cursor-default select-none rounded-md px-4 py-2" id="option-4" role="option" tabindex="-1">Lindsay Walton</li>
+        <li class="cursor-default select-none rounded-md px-4 py-2" id="option-5" role="option" tabindex="-1">Courtney Henry</li>
+      </ul>
+
+      <!-- Empty state, show/hide based on command palette state. -->
+      <div class="px-4 py-14 text-center sm:px-14">
+        <svg class="mx-auto h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+        </svg>
+        <p class="mt-4 text-sm text-gray-900">No people found using that search term.</p>
+      </div>
+    </div>
+  </div>
+</div>

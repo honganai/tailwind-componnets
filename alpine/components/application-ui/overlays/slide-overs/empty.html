@@ -1,0 +1,58 @@
+<!--
+  This example requires Tailwind CSS v2.0+
+
+  The alpine.js code is *NOT* production ready and is included to preview
+  possible interactivity
+-->
+<div class="min-h-[500px] bg-gray-100">
+    
+  
+    <div x-data="{ open: true }" @keydown.window.escape="open = false" x-init="$watch(&quot;open&quot;, o => !o &amp;&amp; window.setTimeout(() => (open = true), 1000))" x-show="open" class="relative z-10" aria-labelledby="slide-over-title" x-ref="dialog" aria-modal="true">
+      <div x-description="Background backdrop, show/hide based on slide-over state." class="fixed inset-0"></div>
+
+      <div class="fixed inset-0 overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+          <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+            
+              <div x-show="open" x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700" x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0" x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700" x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full" class="pointer-events-auto w-screen max-w-md" x-description="Slide-over panel, show/hide based on slide-over state." @click.away="open = false">
+                <div class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
+                  <div class="px-4 sm:px-6">
+                    <div class="flex items-start justify-between">
+                      <h2 class="text-base font-semibold leading-6 text-gray-900" id="slide-over-title">Panel title</h2>
+                      <div class="ml-3 flex h-7 items-center">
+                        <button type="button" class="relative rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" @click="open = false">
+                          <span class="absolute -inset-2.5"></span>
+                          <span class="sr-only">Close panel</span>
+                          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+</svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="relative mt-6 flex-1 px-4 sm:px-6">
+                    <x-placeholder>
+                      <div class="absolute inset-0 px-4 sm:px-6">
+                        <div class="relative h-full overflow-hidden rounded-xl border border-dashed border-gray-400 opacity-75">
+                          <svg class="absolute inset-0 h-full w-full stroke-gray-900/10" fill="none">
+                            <defs>
+                              <pattern id="pattern-431c35a6-d6ff-4ec0-a97f-8a526737d5ad" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                                <path d="M-3 13 15-5M-5 5l18-18M-1 21 17 3"></path>
+                              </pattern>
+                            </defs>
+                            <rect stroke="none" fill="url(#pattern-431c35a6-d6ff-4ec0-a97f-8a526737d5ad)" width="100%" height="100%"></rect>
+                          </svg>
+                        </div>
+                      </div>
+                    </x-placeholder>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  </div>
